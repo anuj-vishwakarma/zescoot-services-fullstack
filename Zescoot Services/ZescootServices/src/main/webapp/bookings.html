@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - Zescoot Services Dashboard</title>
+    <link rel="stylesheet" href="bookingStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+    <h2><a href="index.html" class="zescoot">Zescoot Services</a></h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="bikes.html">Bikes</a></li>
+            <li><a href="bookings.html" class="active">Bookings</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <h1>Bookings</h1>
+                <p>Manage all customer bookings and track the status of each booking.</p>
+            </div>
+        </header>
+
+        <section class="filter-section">
+            <h2>Filter Bookings</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="booking-status">Booking Status</label>
+                    <select id="booking-status">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="customer-name">Customer Name</label>
+                    <input type="text" id="customer-name" placeholder="Enter customer name">
+                </div>
+
+                <button id="filter-btn" class="filter-btn">Apply Filters</button>
+            </div>
+        </section>
+
+        <section class="bookings-table">
+            <h2>Booking Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Bike ID</th>
+                        <th>Booking Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list">
+                    <!-- Booking data will be dynamically loaded here -->
+                    <tr>
+                        <td>#BK001</td>
+                        <td>John Smith</td>
+                        <td>#001</td>
+                        <td>2024-09-01</td>
+                        <td>2024-09-05</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>#BK002</td>
+                        <td>Mary Johnson</td>
+                        <td>#003</td>
+                        <td>2024-09-03</td>
+                        <td>2024-09-07</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td><button class="action-btn">View Details</button></td>
+                    </tr>
+                    <!-- More rows dynamically added -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="bookingScript.js"></script>
+</body>
+</html>

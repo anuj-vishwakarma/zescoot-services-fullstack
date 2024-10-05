@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Bike - Bike Rental Dashboard</title>
+    <link rel="stylesheet" href="addBikeStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Include Sidebar -->
+<div class="sidebar">
+    <h2><a href="index.html" class="zescoot">Zescoot Services</a></h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="bikes.html">Bikes</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <h1>Add New Bike</h1>
+                <p>Fill out the form below to add a new bike to the inventory.</p>
+            </div>
+        </header>
+
+        <section class="add-bike-form">
+            <form id="bike-form">
+                <div class="form-group">
+                    <label for="bike-name">Bike Name</label>
+                    <input type="text" id="bike-name" placeholder="Enter bike name" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-type">Bike Type</label>
+                    <select id="bike-type" required>
+                        <option value="" disabled selected>Select bike type</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="road">Road</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bike-price">Price per Hour ($)</label>
+                    <input type="number" id="bike-price" placeholder="Enter price" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-description">Description</label>
+                    <textarea id="bike-description" placeholder="Enter bike description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bike-image">Upload Image</label>
+                    <input type="file" id="bike-image" accept="image/*">
+                    <div id="image-preview-container">
+                        <img id="image-preview" src="" alt="Image Preview">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Add Bike</button>
+                <p id="form-message"></p>
+            </form>
+        </section>
+    </div>
+
+    <script src="addBikeScript.js"></script>
+    <script>
+        // Load sidebar content
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
