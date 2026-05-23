@@ -1,132 +1,148 @@
 # Zescoot Services Fullstack
 
-A full-stack desktop-based bike rental and service management system built using **JavaFX**, **Java Servlets**, **JDBC**, and **MySQL**.
+A full-stack web application for bike rental and service management built using **HTML, CSS, JavaScript, Java Servlets, JDBC, and MySQL**.
 
-The project provides a complete platform for managing vehicle rentals, customer bookings, service operations, and backend data handling through a modern desktop interface.
+The platform provides secure authentication with **Google Login, OTP verification, and Phone Number Authentication** for a modern and user-friendly experience.
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
-### 👤 User Features
-- User Registration & Login
-- Browse available bikes/scooters
-- Book rental vehicles
-- View booking details
-- Rental price calculation
-- Vehicle availability tracking
-- Service request management
+## 👤 User Authentication
+- Login & Signup system
+- Google Authentication
+- OTP Verification
+- Phone Number Login
+- Secure session handling
 
-### 🛠️ Admin Features
-- Add / Update / Delete vehicles
-- Manage customer bookings
-- Track rental history
+## 🏍️ Bike Rental System
+- Browse available bikes
+- View bike details
+- Rent bikes online
+- Booking management
+
+## 🛠️ Service Management
+- Book vehicle servicing
 - Manage service requests
-- Database-driven vehicle inventory management
-- User management system
+- Service status tracking
+
+## 📱 Responsive Frontend
+- Built using:
+  - HTML
+  - CSS
+  - JavaScript
+- Mobile-friendly UI
+
+## ⚙️ Backend Functionality
+- Java Servlets for request handling
+- JDBC for database connectivity
+- MySQL database integration
+- CRUD operations support
 
 ---
 
-## 🏗️ Tech Stack
+# 🏗️ Tech Stack
 
-### Frontend
-- JavaFX
-- Scene Builder
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-### Backend
+## Backend
 - Java Servlets
 - JDBC
 
-### Database
+## Database
 - MySQL
 
-### Server
-- Apache Tomcat
+## Authentication
+- Google OAuth Login
+- OTP Authentication
+- Phone Number Verification
 
 ---
 
-## ⚙️ System Architecture
+# 📂 Project Structure
 
-```text
-JavaFX Desktop UI
-        ↓
-    Servlets
-        ↓
-      JDBC
-        ↓
-     MySQL
+```bash
+zescoot-services-fullstack/
+│
+├── frontend/
+│   ├── html/
+│   ├── css/
+│   ├── js/
+│
+├── backend/
+│   ├── servlets/
+│   ├── dao/
+│   ├── models/
+│   ├── database/
+│
+├── mysql/
+│   ├── schema.sql
+│
+├── assets/
+│
+└── README.md
 ```
 
 ---
 
-## 📂 Project Modules
+# 🧠 System Architecture
 
-### 1. Authentication Module
-- Login system
-- Registration system
-- Session handling
-
-### 2. Vehicle Management Module
-- Add vehicles
-- Update vehicle details
-- Delete vehicles
-- Availability management
-
-### 3. Booking Module
-- Create bookings
-- Rental duration handling
-- Pricing calculations
-
-### 4. Service Management Module
-- Vehicle servicing records
-- Service status tracking
-
-### 5. Database Module
-- JDBC connection handling
-- CRUD operations
-- Query execution
+```text
+Frontend (HTML/CSS/JS)
+        ↓
+Java Servlets
+        ↓
+JDBC
+        ↓
+MySQL Database
+```
 
 ---
 
-## 🗄️ Database Design
+# 🔐 Authentication Flow
 
-### Main Tables
-- `users`
-- `vehicles`
-- `bookings`
-- `services`
+## Google Login
+- User authenticates using Google OAuth
+- Account is verified securely
+- Session is created after successful login
 
-### Relationships
-- One user can create multiple bookings
-- One vehicle can have multiple service records
-- Bookings are linked with both users and vehicles
-
----
-
-## 🧰 Tools & Technologies
-
-- Java
-- JavaFX
-- Servlets
-- JDBC
-- MySQL
-- Scene Builder
-- IntelliJ IDEA / Eclipse
-- Apache Tomcat
+## OTP & Phone Login
+- User enters phone number
+- OTP is sent for verification
+- User gains access after OTP validation
 
 ---
 
-## 📦 Installation & Setup
+# 💾 Database Functionalities
 
-### Prerequisites
-- Java JDK 17+
-- MySQL Server
-- Apache Tomcat
-- JavaFX SDK
+The application uses MySQL for:
+- User data storage
+- Booking records
+- Service requests
+- Authentication details
+- Session-related information
 
 ---
 
-### Clone Repository
+# ⚡ Key Functionalities
+
+- User Registration & Login
+- Bike Listings
+- Rental Booking
+- Service Booking
+- Database Connectivity using JDBC
+- Authentication & Authorization
+- Dynamic Data Handling
+- Session Management
+
+---
+
+# 🛠️ Setup Instructions
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/anuj-vishwakarma/zescoot-services-fullstack.git
@@ -134,72 +150,80 @@ git clone https://github.com/anuj-vishwakarma/zescoot-services-fullstack.git
 
 ---
 
-### Database Setup
+## 2️⃣ Configure MySQL Database
 
-1. Create MySQL database:
+Create a database:
 
 ```sql
 CREATE DATABASE zescoot;
 ```
 
-2. Import SQL tables.
-
-3. Update database credentials in JDBC configuration.
+Import the SQL schema file.
 
 ---
 
-### Run Backend
+## 3️⃣ Configure JDBC
 
-1. Configure Apache Tomcat
-2. Deploy servlet project
-3. Start Tomcat server
+Update database credentials inside the JDBC configuration file:
 
----
-
-### Run Frontend
-
-1. Open JavaFX project
-2. Configure JavaFX SDK
-3. Run the application
+```java
+String url = "jdbc:mysql://localhost:3306/zescoot";
+String username = "root";
+String password = "your_password";
+```
 
 ---
 
-## 🔒 Security Features
+## 4️⃣ Run the Project
 
-- Authentication system
-- Input validation
-- JDBC Prepared Statements
-- SQL Injection prevention
+Deploy the project on:
+- Apache Tomcat Server
 
----
+Then open:
 
-## 📈 Future Improvements
-
-- Online payment integration
-- Real-time vehicle tracking
-- REST API migration
-- Cloud deployment
-- Mobile application support
-- JWT authentication
-- Microservices architecture
+```text
+http://localhost:8080/zescoot
+```
 
 ---
 
-## 🎯 Learning Outcomes
+# 🎯 Future Improvements
 
-This project demonstrates:
-- Full-stack Java development
-- Desktop application development using JavaFX
-- Backend development with Servlets
+- Payment Gateway Integration
+- Admin Dashboard
+- Real-time Booking Tracking
+- Email Notifications
+- JWT Authentication
+- REST API Conversion
+- React or Angular Frontend Migration
+
+---
+
+# 📸 Screenshots
+
+_Add project screenshots here._
+
+---
+
+# 👨‍💻 Author
+
+Created by **Anuj Vishwakarma**
+
+## GitHub
+- https://github.com/anuj-vishwakarma
+
+## Repository
+- https://github.com/anuj-vishwakarma/zescoot-services-fullstack
+
+---
+
+# ⭐ Conclusion
+
+Zescoot is a complete full-stack web application demonstrating:
+- Frontend development
+- Backend development with Java
 - Database integration using JDBC
-- CRUD operations
-- MVC architecture understanding
-- Client-server communication
+- Authentication systems
+- Real-world rental/service workflow implementation
 
----
-
-## 👨‍💻 Author
-
-**Anuj Vishwakarma**
-
-GitHub: https://github.com/anuj-vishwakarma
+This project showcases strong fundamentals of full-stack web development using Java-based technologies.
