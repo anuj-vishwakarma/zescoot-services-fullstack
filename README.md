@@ -199,11 +199,7 @@ http://localhost:8080/zescoot
 
 ---
 
-# 📸 Screenshots
 
-_Add project screenshots here._
-
----
 
 # 👨‍💻 Author
 
