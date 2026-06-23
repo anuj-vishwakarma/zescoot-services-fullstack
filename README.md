@@ -63,7 +63,6 @@ https://github.com/anuj-vishwakarma/zescoot-services-fullstack
 - HTML
 - CSS
 - JavaScript
-- React.js *(if used in frontend)*
 
 ---
 
